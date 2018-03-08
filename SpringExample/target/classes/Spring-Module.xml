@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean id="checker" class = "com.glider.spring.Checker"> </bean>
+
+    <bean id="editor" class = "com.glider.spring.TextEditor">
+        <constructor-arg ref = "windows"> </constructor-arg>
+    </bean>
+
+    <bean id="google" class = "com.glider.spring.GoogleSpellChecker"></bean>
+
+    <bean id="windows" class = "com.glider.spring.WindowsSpellChecker"></bean>
+	
+</beans>
